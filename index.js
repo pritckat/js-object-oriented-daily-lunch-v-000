@@ -103,13 +103,9 @@ class Delivery {
     store.deliveries.push(this);
   }
 
-  meal() {
-    return store.meals.find(
-      function(meal) {
-        return this.mealId === meal.id;
-      }.bind(this)
-    )
-  }
+  meal(){
+      return store.meals.find(meal => {return meal.id === this.mealId})
+    }
   customer() {
     return store.customers.find(
       function(customer) {
